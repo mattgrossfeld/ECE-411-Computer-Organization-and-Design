@@ -1,0 +1,24 @@
+module counter #(WIDTH = 8)
+(
+	input clk,
+	input datain,
+	input clear,
+	output [WIDTH-1:0] dataout
+);
+
+logic [WIDTH-1:0] count;
+
+always_comb
+begin
+	dataout = count;
+end
+
+always_ff @(posedge clk)
+begin
+	if(clear)
+		count <= 0;
+	else
+		count <=  count + datain;
+end
+
+endmodule : counter

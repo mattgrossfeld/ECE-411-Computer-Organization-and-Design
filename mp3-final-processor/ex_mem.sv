@@ -1,0 +1,68 @@
+import rv32i_types::*;
+
+module ex_mem
+(
+   input clk,		//Clk
+   input load,	//Load in values
+	input clear, //Clears the entire register. Sets everything to zero
+	input rv32i_control_word control_word_in, //CONTROL WORD PASSES THROUGH EVERY STAGE
+	input [31:0] pc_in,	//Need pc
+	input rv32i_reg rd_in,		//Push rd through
+	input rv32i_word rs2_data_in,
+	input cmp_data_in,
+	input rv32i_word alu_data_in,
+	input rv32i_word u_ex,
+	
+	output rv32i_word u_mem,
+	output logic [31:0] pc_out,
+	output rv32i_control_word control_word_out,
+	output rv32i_word rs2_data_out, 
+	output logic cmp_data_out,
+	output rv32i_word alu_data_out,
+	output rv32i_reg rd_out		//Push rd through
+);
+
+logic [31:0] pc; 
+rv32i_control_word control_word;
+rv32i_word rs2_data;
+rv32i_word alu_data;
+logic cmp_data;
+logic [4:0] rd;
+
+assign pc_out = pc;
+assign rs2_data_out = rs2_data;
+assign control_word_out = control_word;
+assign alu_data_out = alu_data;
+assign cmp_data_out = cmp_data;
+assign rd_out = rd;
+assign u_mem = u_ex;
+
+always_ff @(posedge clk)
+begin
+    if (clear)
+		begin
+        	control_word <= 0;
+        	rs2_data <= 0;
+        	alu_data <= 0;
+        	rd <= rd_in;
+			pc <= pc_in;
+			cmp_data <= 0;
+		end
+	 
+	 else if (load) //Load will be mem_resp from instruction memory
+		begin
+			control_word <= control_word_in;
+			pc <= pc_in;
+			rs2_data <= rs2_data_in;
+			alu_data <= alu_data_in;
+			rd <= rd_in;
+			if ((control_word_in.opcode == 7'b1100111) || (control_word_in.opcode == 7'b1101111))
+				cmp_data <= 1'b1;
+			else
+				cmp_data <= cmp_data_in;
+			
+		end
+end
+
+
+endmodule : ex_mem

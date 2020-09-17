@@ -1,0 +1,28 @@
+import rv32i_types::*;
+
+module ewb
+(
+	input clk, 
+	input logic mem_read_out,  //read signal From L2
+	input logic mem_write_out, //write signal From L2
+	input logic [255:0] mem_wdata_out, //wdata From L2
+	input rv32i_word mem_address_out, //Address From L2
+	input logic pmem_resp, //From PMEM
+	input logic [255:0] pmem_rdata, //rdata From PMEM
+	
+	output logic mem_resp_out, //Response from buffer to L2(?)
+	output logic [255:0] mem_rdata_out, //Read data from buffer
+	output logic pmem_read,
+	output logic pmem_write,
+	output rv32i_word pmem_address,
+	output logic [255:0] pmem_wdata
+);
+
+//Additional logic
+	logic read_entry;
+	logic write_entry; 
+	logic hit;
+	logic entry_written;
+	logic stall_write;
+	
+endmodule : ewb

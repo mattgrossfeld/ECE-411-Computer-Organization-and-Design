@@ -1,0 +1,40 @@
+module stall_load_control
+(
+	input icache_resp,
+	input dcache_resp,
+	input d_write,
+	input d_read,
+	
+	output logic load_pc,
+	output logic load_if_id,
+	output logic load_id_ex,
+	output logic load_ex_mem,
+	output logic load_mem_wb
+);
+
+always_comb
+begin
+	load_pc = 1;
+	load_if_id = 1;
+	load_id_ex = 1;
+	load_ex_mem = 1;
+	load_mem_wb = 1;
+	
+	if (!icache_resp) begin
+		load_pc = 0;
+		load_if_id = 0;
+		load_id_ex = 0;
+		load_ex_mem = 0;
+		load_mem_wb = 0;
+	end
+	else if ((d_write || d_read) && !dcache_resp) begin
+		load_pc = 0;
+		load_if_id = 0;
+		load_id_ex = 0;
+		load_ex_mem = 0;
+		load_mem_wb = 0;
+	end
+		
+end
+
+endmodule : stall_load_control

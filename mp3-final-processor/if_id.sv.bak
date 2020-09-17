@@ -1,0 +1,47 @@
+module if_id
+    input clk,		//Clk
+    input load,	//Load in values
+	 input clear, //Clears the entire register. Sets everything to zero
+    input logic mem_resp_in,
+	 input logic [31:0] read_data_in, //THIS IS THE INSTRUCTION
+	 input logic [31:0] pc_in,
+	 output rv32i_reg rs1,
+	 output rv32i_reg rs2,
+	 output rv32i_reg rd,
+	 output logic [31:0] read_data_out,
+	 output rv32i_word u_imm, 
+	 output rv32i_word b_imm, 
+	 output rv32i_word s_imm, 
+	 output rv32i_word j_imm,
+	 output rv32i_word i_imm,
+	 output rv32i_opcode opcode,
+	 output logic [2:0] funct3,
+	 output logic [6:0] funct7
+);
+
+initial
+begin
+    rs1 = 0;
+    rs2 = 0;
+    rd = 0;
+    read_data_out = 0;
+    u_imm = 
+    b_imm =  
+    s_imm =  
+    j_imm = 
+    i_imm = 
+    opcode = 
+    funct3 = 
+    funct7 = 
+end
+
+always_ff @(posedge clk)
+begin
+    if (load)
+    begin
+        data = in;
+    end
+end
+
+
+endmodule : if_id

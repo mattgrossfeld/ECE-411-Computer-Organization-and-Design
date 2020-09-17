@@ -1,0 +1,112 @@
+import rv32i_types::*;
+
+module ewb_control
+(
+	input clk,
+	input logic hit,
+	input logic write_ewb, read_ewb,
+	input logic pmem_resp,
+	output logic read_entry, write_entry, entry_written, 
+	output logic ewb_resp,
+	output logic pmem_read, pmem_write
+);
+
+enum int unsigned {
+    /* List of states */
+	read_mem,
+	ewb_stall,
+	ewb_idle,
+	ewb_ready
+} state, next_state;
+
+always_comb
+begin : state_actions
+	/* Default Assignments */
+	read_entry = 1'b0;
+	write_entry = 1'b0;
+	entry_written = 1'b0;
+	ewb_resp = 1'b0;
+	pmem_read = 1'b0;
+	pmem_write = 1'b0;
+	
+	case(state)
+		s_1:
+		begin
+			if (pmem_read_d || pmem_write_d)
+			begin
+				mem_address_out = pmem_address_d;
+				mem_read_out = pmem_read_d;
+				mem_write_out = pmem_write_d;
+				mem_wdata_out = pmem_wdata_d;
+				pmem_rdata_d = mem_rdata_out;
+				pmem_resp_d = mem_resp_out;
+				pmem_resp_i = 0;
+				pmem_rdata_i = 0;
+			end
+		end
+		
+		s_2:
+		begin
+			if (pmem_read_i || pmem_write_i)
+				begin
+					mem_address_out = pmem_address_i;
+					mem_read_out = pmem_read_i;
+					mem_write_out = pmem_write_i;
+					mem_wdata_out = pmem_wdata_i;
+					pmem_rdata_i = mem_rdata_out;
+					pmem_resp_i = mem_resp_out;
+					pmem_rdata_d = 0;
+					pmem_resp_d = 0;
+				end
+		end
+		default: ;
+	endcase
+	
+end
+
+always_comb
+begin : next_state_logic
+	next_state = state;
+	case(state)
+		s_1:
+		begin
+			if (pmem_read_d || pmem_write_d)
+			begin
+				if(mem_resp_out) 
+					next_state = s_2;
+				else
+					next_state = s_1;
+			end
+			else //if (pmem_read_i)
+			begin
+				next_state = s_2;
+			end
+		/*		if(mem_resp_out) 
+					next_state = s_1;
+		*/
+		end
+		
+		s_2:
+		begin
+			if (pmem_read_i)
+			begin
+				if(mem_resp_out) 
+					next_state = s_2;
+				else
+					next_state = s_2;
+			end
+			if (pmem_read_d || pmem_write_d)
+				next_state = s_1;
+		end
+		
+		default: next_state = s_2;
+	endcase
+end
+
+always_ff @(posedge clk)
+begin: next_state_assignment
+    /* Assignment of next state on clock edge */
+	 state <= next_state;
+end
+
+endmodule : ewb_control

@@ -1,0 +1,29 @@
+import rv32i_types::*;
+
+module data_decoder
+(
+	input logic [3:0] mem_byte_enable,
+	input logic [4:0] offset,
+	input rv32i_word mem_wdata,
+	input logic [255:0] waydatamux_out,
+	output logic [255:0] out
+);
+
+always_comb
+begin
+	out = waydatamux_out;
+	case (offset)
+		5'b00000:
+		5'b00001:
+		5'b00010:
+		5'b00011:
+		5'b00100:
+		5'b00101:
+		5'b00110:
+		5'b00111:
+		5'b01000:
+		5'b01001:
+	endcase
+end
+
+endmodule : data_decoder

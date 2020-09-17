@@ -1,0 +1,72 @@
+module mux32 #(parameter width = 32)
+(
+input 4:0] sel,
+input width-1:0] a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af,
+output logic width-1:0] out
+);
+always_comb
+begin
+	if (sel == 1'b00000)
+		out = a;
+	else if (sel == 1'b00001)
+		out = b;
+	else if (sel == 00010)
+		out = c;
+	else if (sel == 00011)
+		out = d;
+	else if (sel == 00100)
+		out = e;
+	else if (sel == 00101)
+		out = f;
+	else if (sel == 00110)
+		out = g;
+	else if (sel == 00111)
+		out = h;
+	else if (sel == 01000)
+		out = i;
+	else if (sel == 01001)
+		out = j;
+	else if (sel == 01010)
+		out = k;
+	else if (sel == 01011)
+		out = l;
+	else if (sel == 01100)
+		out = m;
+	else if (sel == 01101)
+		out = n;
+	else if (sel == 01110)
+		out = o;
+	else if (sel == 01111)
+		out = p;
+	else if (sel == 10000)
+		out = q;
+	else if (sel == 10001)
+		out = r;
+	else if (sel == 10010)
+		out = s;
+	else if (sel == 10011)
+		out = t;
+	else if (sel == 10100)
+		out = u;
+	else if (sel == 10101)
+		out = v;
+	else if (sel == 10110)
+		out = w;
+	else if (sel == 10111)
+		out = x;
+	else if (sel == 11000)
+		out = y;
+	else if (sel == 11001)
+		out = z;
+	else if (sel == 11010)
+		out = aa;
+	else if (sel == 11011)
+		out = ab;
+	else if (sel == 11100)
+		out = ac;
+	else if (sel == 11101)
+	else if (sel == 11110)
+	else
+
+end
+endmodule : mux8

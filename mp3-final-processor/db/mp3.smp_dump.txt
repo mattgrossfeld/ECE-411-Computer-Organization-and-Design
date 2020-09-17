@@ -1,0 +1,30 @@
+
+State Machine - |mp3|cache:data_cache|cache_control:control|state
+Name state.idle_action state.allocate state.writeback 
+state.idle_action 0 0 0 
+state.writeback 1 0 1 
+state.allocate 1 1 0 
+
+State Machine - |mp3|cache:instruction_cache|cache_control:control|state
+Name state.idle_action state.allocate state.writeback 
+state.idle_action 0 0 0 
+state.writeback 1 0 1 
+state.allocate 1 1 0 
+
+State Machine - |mp3|arbiter:arbiter|state
+Name state.s_2 
+state.s_1 0 
+state.s_2 1 
+
+State Machine - |mp3|cache_L2_4way:cacheL2|cache_L2_4way_control:control|state
+Name state.idle_action state.allocate state.writeback 
+state.idle_action 0 0 0 
+state.writeback 1 0 1 
+state.allocate 1 1 0 
+
+State Machine - |mp3|ewb:eviction_write_buffer|ewb_control:ewb_control|state
+Name state.ewb_ready state.ewb_idle state.ewb_stall state.read_mem 
+state.read_mem 0 0 0 0 
+state.ewb_stall 0 0 1 1 
+state.ewb_idle 0 1 0 1 
+state.ewb_ready 1 0 0 1 

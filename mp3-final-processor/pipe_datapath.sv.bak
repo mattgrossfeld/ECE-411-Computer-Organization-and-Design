@@ -1,0 +1,79 @@
+module pipe_datapath
+(
+	 input clk,
+
+    /* control signals */
+    input load_pc,
+	 ///
+	 input cmpmux_sel,
+
+    /* declare more ports here */
+	 input load_ir,
+	 input load_regfile,
+	 input load_mar,
+	 input load_mdr,
+	 input load_data_out,
+	 input [2:0] alu_mux_sel, 
+	 input alu_ops aluop,
+
+	 output rv32i_word mem_address,
+	 output rv32i_word mem_wdata,
+
+	 input rv32i_word mem_rdata,
+
+	 output rv32i_opcode opcode,
+
+	 input branch_funct3_t cmpop,
+
+	 output logic [2:0] funct3,
+	 output logic [6:0] funct7,
+);
+
+// IF
+pc_register pc
+();
+
+mux2 pcmux
+();
+
+adder pc_adder
+();
+
+
+// IF/ID
+register pc_reg_1
+();
+
+register data_reg
+();
+
+
+// ID
+ir IR
+();
+
+regfile regfile
+();
+
+
+// ID/EX
+register cmpop
+register cmpmux_sel
+register alumux_sel
+register aluop
+register read
+register write
+register pc_reg_2
+register rs1
+register rs1_out
+register rs2
+register rs2_out
+register *_imm
+
+
+// EX
+
+
+
+
+endmodule : pipe_datapath

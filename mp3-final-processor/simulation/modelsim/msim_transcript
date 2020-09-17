@@ -1,0 +1,442 @@
+# ERROR: No extended dataflow license exists
+# do mp3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/rv32i_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package rv32i_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cache_L2_4way_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_L2_4way_control
+# 
+# Top level modules:
+# 	cache_L2_4way_control
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/plus4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module plus4
+# 
+# Top level modules:
+# 	plus4
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/pc_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pc_register
+# 
+# Top level modules:
+# 	pc_register
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mux8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mux16.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux16
+# 
+# Top level modules:
+# 	mux16
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/array_L2_4way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module array_L2_4way
+# 
+# Top level modules:
+# 	array_L2_4way
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/is_hit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module is_hit
+# 
+# Top level modules:
+# 	is_hit
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/ewb_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ewb_control_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module ewb_control
+# 
+# Top level modules:
+# 	ewb_control
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/data_decoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package data_decoder_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module data_decoder
+# 
+# Top level modules:
+# 	data_decoder
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_control
+# 
+# Top level modules:
+# 	cache_control
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module array
+# 
+# Top level modules:
+# 	array
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/control_rom.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package control_rom_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module control_rom
+# 
+# Top level modules:
+# 	control_rom
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cache_L2_4way_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_L2_4way_datapath_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cache_L2_4way_datapath
+# 
+# Top level modules:
+# 	cache_L2_4way_datapath
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/fwd_logic.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package fwd_logic_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module fwd_logic
+# 
+# Top level modules:
+# 	fwd_logic
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/stall_load_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package stall_load_control_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module stall_load_control
+# 
+# Top level modules:
+# 	stall_load_control
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/if_id.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package if_id_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module if_id
+# 
+# Top level modules:
+# 	if_id
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mem_wb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mem_wb_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module mem_wb
+# 
+# Top level modules:
+# 	mem_wb
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/id_ex.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package id_ex_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module id_ex
+# 
+# Top level modules:
+# 	id_ex
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/ex_mem.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ex_mem_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module ex_mem
+# 
+# Top level modules:
+# 	ex_mem
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/ewb_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ewb_datapath_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module ewb_datapath
+# 
+# Top level modules:
+# 	ewb_datapath
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/ewb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ewb_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module ewb
+# 
+# Top level modules:
+# 	ewb
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cmp.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cmp_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cmp
+# 
+# Top level modules:
+# 	cmp
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_datapath_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cache_datapath
+# 
+# Top level modules:
+# 	cache_datapath
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/arbiter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package arbiter_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/pipe_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: /home/xkuissi2/ece411/mp3/pipe_datapath.sv(597): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# -- Compiling package pipe_datapath_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module pipe_datapath
+# ** Warning: /home/xkuissi2/ece411/mp3/pipe_datapath.sv(597): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	pipe_datapath
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/cache_L2_4way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_L2_4way_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cache_L2_4way
+# 
+# Top level modules:
+# 	cache_L2_4way
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mp3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module mp3
+# 
+# Top level modules:
+# 	mp3
+# 
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/mp3_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_tb_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module mp3_tb
+# 
+# Top level modules:
+# 	mp3_tb
+# vlog -sv -work work +incdir+/home/xkuissi2/ece411/mp3 {/home/xkuissi2/ece411/mp3/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
+# Loading sv_std.std
+# Loading work.rv32i_types
+# Loading work.mp3_tb_sv_unit
+# Loading work.mp3_tb
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.ewb_sv_unit
+# Loading work.ewb
+# Loading work.ewb_control_sv_unit
+# Loading work.ewb_control
+# Loading work.ewb_datapath_sv_unit
+# Loading work.ewb_datapath
+# Loading work.register
+# Loading work.mux2
+# Loading work.cache_L2_4way_sv_unit
+# Loading work.cache_L2_4way
+# Loading work.cache_L2_4way_control
+# Loading work.cache_L2_4way_datapath_sv_unit
+# Loading work.cache_L2_4way_datapath
+# Loading work.array_L2_4way
+# Loading work.is_hit
+# Loading work.mux8
+# Loading work.mux4
+# Loading work.arbiter_sv_unit
+# Loading work.arbiter
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.array
+# Loading work.data_decoder_sv_unit
+# Loading work.data_decoder
+# Loading work.pipe_datapath_sv_unit
+# Loading work.pipe_datapath
+# Loading work.stall_load_control_sv_unit
+# Loading work.stall_load_control
+# Loading work.pc_register
+# Loading work.plus4
+# Loading work.if_id_sv_unit
+# Loading work.if_id
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.regfile
+# Loading work.cmp_sv_unit
+# Loading work.cmp
+# Loading work.mux16
+# Loading work.id_ex_sv_unit
+# Loading work.id_ex
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.ex_mem_sv_unit
+# Loading work.ex_mem
+# Loading work.mem_wb_sv_unit
+# Loading work.mem_wb
+# Loading work.counter
+# Loading work.fwd_logic_sv_unit
+# Loading work.fwd_logic
+# Loading work.physical_memory
+# ** Warning: (vsim-3017) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(239): [TFMPC] - Too few port connections. Expected 19, found 17.
+#         Region: /mp3_tb/dut/cpu/if_id
+# ** Warning: (vsim-3722) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(239): [TFMPC] - Missing connection for port 'prediction_if'.
+# ** Warning: (vsim-3722) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(239): [TFMPC] - Missing connection for port 'prediction_id'.
+# ** Warning: (vsim-3017) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(251): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /mp3_tb/dut/cpu/control_rom
+# ** Warning: (vsim-3722) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(251): [TFMPC] - Missing connection for port 'prediction'.
+# ** Warning: (vsim-3015) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(282): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'out'. The port definition is at: /home/xkuissi2/ece411/mp3/cmp.sv(7).
+#         Region: /mp3_tb/dut/cpu/cmp
+# ** Warning: (vsim-3015) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(360): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'cmp_data_in'. The port definition is at: /home/xkuissi2/ece411/mp3/id_ex.sv(17).
+#         Region: /mp3_tb/dut/cpu/id_ex
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+add wave -position end  sim:/mp3_tb/registers
+restart
+# Loading sv_std.std
+# Loading work.rv32i_types
+# Loading work.mp3_tb_sv_unit
+# Loading work.mp3_tb
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.ewb_sv_unit
+# Loading work.ewb
+# Loading work.ewb_control_sv_unit
+# Loading work.ewb_control
+# Loading work.ewb_datapath_sv_unit
+# Loading work.ewb_datapath
+# Loading work.register
+# Loading work.mux2
+# Loading work.cache_L2_4way_sv_unit
+# Loading work.cache_L2_4way
+# Loading work.cache_L2_4way_control
+# Loading work.cache_L2_4way_datapath_sv_unit
+# Loading work.cache_L2_4way_datapath
+# Loading work.array_L2_4way
+# Loading work.is_hit
+# Loading work.mux8
+# Loading work.mux4
+# Loading work.arbiter_sv_unit
+# Loading work.arbiter
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.array
+# Loading work.data_decoder_sv_unit
+# Loading work.data_decoder
+# Loading work.pipe_datapath_sv_unit
+# Loading work.pipe_datapath
+# Loading work.stall_load_control_sv_unit
+# Loading work.stall_load_control
+# Loading work.pc_register
+# Loading work.plus4
+# Loading work.if_id_sv_unit
+# Loading work.if_id
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.regfile
+# Loading work.cmp_sv_unit
+# Loading work.cmp
+# Loading work.mux16
+# Loading work.id_ex_sv_unit
+# Loading work.id_ex
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.ex_mem_sv_unit
+# Loading work.ex_mem
+# Loading work.mem_wb_sv_unit
+# Loading work.mem_wb
+# Loading work.counter
+# Loading work.fwd_logic_sv_unit
+# Loading work.fwd_logic
+# Loading work.physical_memory
+# ** Warning: (vsim-3017) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(239): [TFMPC] - Too few port connections. Expected 19, found 17.
+#         Region: /mp3_tb/dut/cpu/if_id
+# ** Warning: (vsim-3722) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(239): [TFMPC] - Missing connection for port 'prediction_if'.
+# ** Warning: (vsim-3722) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(239): [TFMPC] - Missing connection for port 'prediction_id'.
+# ** Warning: (vsim-3017) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(251): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /mp3_tb/dut/cpu/control_rom
+# ** Warning: (vsim-3722) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(251): [TFMPC] - Missing connection for port 'prediction'.
+# ** Warning: (vsim-3015) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(282): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'out'. The port definition is at: /home/xkuissi2/ece411/mp3/cmp.sv(7).
+#         Region: /mp3_tb/dut/cpu/cmp
+# ** Warning: (vsim-3015) /home/xkuissi2/ece411/mp3/pipe_datapath.sv(360): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'cmp_data_in'. The port definition is at: /home/xkuissi2/ece411/mp3/id_ex.sv(17).
+#         Region: /mp3_tb/dut/cpu/id_ex
+run 30000ns
+run 40000ns
+run 50000ns
+
+run 60000ns
+run 70000ns
+run 80000ns
+run 90000ns
+run 100000ns
+run 1000000ns
+run 1100000ns

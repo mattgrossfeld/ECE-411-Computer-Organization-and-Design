@@ -1,0 +1,33 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/rv32i_types.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/regfile.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/pc_reg.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/mux8.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/mux4.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/mux2.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/adder.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/mem_wb.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/ex_mem.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/if_id.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/id_ex.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/control_rom.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/cmp.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/alu.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/mp3.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/pipe_datapath.sv}
+
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/mp3_tb.sv}
+vlog -sv -work work +incdir+/home/grossfe2/ece411/mp3/realclasseshavecurves {/home/grossfe2/ece411/mp3/realclasseshavecurves/magic_memory_dual_port.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+
+add wave *
+view structure
+view signals
+run 200 ns
